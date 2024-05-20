@@ -27,7 +27,7 @@ const PerfumeCardsSlider: FC = (): ReactElement => {
     return (
         <div className={"perfume-cards-slider"}>
             <Typography.Title level={3} className={"perfume-cards-slider-title"}>
-                PERSONALLY RECOMMENDED
+                CÁC SẢN PHẨM PHÙ HỢP VỚI BẠN 
             </Typography.Title>
             <Carousel>
                 <PerfumeCardsSliderItem perfumes={perfumes.slice(0, 4)} />

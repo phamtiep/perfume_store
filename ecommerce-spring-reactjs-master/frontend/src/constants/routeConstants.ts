@@ -6,7 +6,6 @@ export const RESET = "/reset";
 export const ACTIVATE = "/activate";
 export const MENU = "/menu";
 export const PRODUCT = "/product";
-export const CONTACTS = "/contacts";
 export const CART = "/cart";
 export const ORDER = "/order";
 export const ORDER_FINALIZE = "/order/finalize";
