@@ -8,7 +8,7 @@
         <version>2.3.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.gmail.merikbest2015</groupId>
+    <groupId>com.backend.05252zas</groupId>
     <artifactId>ecommerce</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ecommerce</name>
