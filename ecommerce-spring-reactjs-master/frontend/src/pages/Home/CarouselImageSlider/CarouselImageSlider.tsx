@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 
 import { PRODUCT } from "../../../constants/routeConstants";
 import "./CarouselImageSlider.css";
-
+import banner1 from "../../../img/guccibloombanner.png"
+import banner2 from "../../../img/diorbanner.jpg"
 export const sliderItems = [
     {
         id: "85",
         name: "Photo 1",
-        url: "https://i.ibb.co/dkpHPXQ/1million-ENG.jpg"
+        url: banner1
     },
     {
         id: "46",
         name: "Photo 2",
-        url: "https://i.ibb.co/C0vbNcy/dior-ENG.jpg"
+        url: banner2
     }
 ];
 

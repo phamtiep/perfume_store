@@ -10,7 +10,8 @@ import { logoutSuccess } from "../../redux-toolkit/user/user-slice";
 import { ACCOUNT, BASE, CONTACTS, LOGIN, MENU, REGISTRATION } from "../../constants/routeConstants";
 import { CART } from "../../constants/urlConstants";
 import "./NavBar.scss";
-
+import logo2 from "../../img/perfumelogo.png"
+import logo from "../../img/logo2.png"
 const NavBar: FC = (): ReactElement => {
     const dispatch = useDispatch();
     const usersData = useSelector(selectUserFromUserState);
@@ -24,26 +25,19 @@ const NavBar: FC = (): ReactElement => {
     return (
         <>
             <div className={"navbar-logo-wrapper"}>
-                <img alt={"navbar-logo"} src="https://i.ibb.co/fqYvrL8/LOGO4.jpg" />
+                <img alt={"navbar-logo"} src={logo} />
             </div>
             <Affix>
                 <div className={"navbar-wrapper"}>
                     <Row style={{ padding: "0px 400px" }}>
-                        <Col span={12}>
+                        <Row >
                             <ul>
                                 <Link to={BASE}>
-                                    <li>HOME</li>
+                                    <li>TRANG CHỦ </li>
                                 </Link>
                                 <li>
-                                    <Link to={{ pathname: MENU, state: { id: "all" } }}>PERFUMES</Link>
+                                    <Link to={{ pathname: MENU, state: { id: "all" } }}> BỘ SƯU TẬP </Link>
                                 </li>
-                                <Link to={CONTACTS}>
-                                    <li>CONTACTS</li>
-                                </Link>
-                            </ul>
-                        </Col>
-                        <Col span={12}>
-                            <ul>
                                 <li className={"navbar-cart"}>
                                     <Badge count={cartItemsCount} size="small" color={"green"}>
                                         <Link to={CART}>
@@ -56,13 +50,13 @@ const NavBar: FC = (): ReactElement => {
                                         <Link to={ACCOUNT}>
                                             <li>
                                                 <UserOutlined />
-                                                MY ACCOUNT
+                                                TÀI KHOẢN CỦA TÔI
                                             </li>
                                         </Link>
                                         <Link id={"handleLogout"} to={BASE} onClick={handleLogout}>
                                             <li>
                                                 <LogoutOutlined />
-                                                EXIT
+                                                THOÁT 
                                             </li>
                                         </Link>
                                     </>
@@ -72,20 +66,22 @@ const NavBar: FC = (): ReactElement => {
                                             <li>
                                                 <Space align={"baseline"}>
                                                     <LoginOutlined />
-                                                    SIGN IN
+                                                    ĐĂNG NHẬP 
                                                 </Space>
                                             </li>
                                         </Link>
                                         <Link to={REGISTRATION}>
                                             <li>
                                                 <UserAddOutlined />
-                                                SIGN UP
+                                                ĐĂNG KÍ 
                                             </li>
                                         </Link>
                                     </>
                                 )}
+
                             </ul>
-                        </Col>
+                        </Row>
+                
                     </Row>
                 </div>
             </Affix>

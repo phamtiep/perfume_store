@@ -26,7 +26,6 @@ import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Menu from "./pages/Menu/Menu";
-import Contacts from "./pages/Contacts/Contacts";
 import Cart from "./pages/Cart/Cart";
 import Order from "./pages/Order/Order";
 import Home from "./pages/Home/Home";
@@ -65,7 +64,6 @@ const App: FC = (): ReactElement => {
                 <Route exact path={`${ACTIVATE}/:code`} component={Login} />
                 <Route exact path={MENU} component={Menu} />
                 <Route exact path={`${PRODUCT}/:id`} component={Product} />
-                <Route exact path={CONTACTS} component={Contacts} />
                 <Route exact path={CART} component={Cart} />
                 <Route exact path={ORDER} component={Order} />
                 <Route exact path={ORDER_FINALIZE} component={OrderFinalize} />
