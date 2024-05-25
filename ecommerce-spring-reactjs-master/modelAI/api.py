@@ -33,7 +33,7 @@ class Recommend(Resource):
         user_id = author2id.get(author)
         nRate = numRate.count_perfumes_for_author(merged_df, user_id)
         if (nRate < 3):
-            return popular_perfume_id
+            return jsonify({'recommendations': popular_perfume_id})
         else:
             # Load model and label encoders
             model = load_model()
