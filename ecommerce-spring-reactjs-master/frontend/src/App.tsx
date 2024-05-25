@@ -9,7 +9,6 @@ import {
     ACTIVATE,
     BASE,
     CART,
-    CONTACTS,
     FORGOT,
     LOGIN,
     MENU,

@@ -30,6 +30,7 @@ export const fetchPerfumeByQuery = createAsyncThunk<Partial<FullPerfumeResponse>
     "perfume/fetchPerfumeByQuery",
     async (perfumeId, thunkApi) => {
         try {
+            // @ts-ignore
             const response = await RequestService.post(PERFUMES_GRAPHQL_PERFUME, {
                 query: getPerfumeByQuery(perfumeId)
             });

@@ -7,7 +7,7 @@ import { Affix, Badge, Col, Row, Space } from "antd";
 import { selectUserFromUserState } from "../../redux-toolkit/user/user-selector";
 import { selectCartItemsCount } from "../../redux-toolkit/cart/cart-selector";
 import { logoutSuccess } from "../../redux-toolkit/user/user-slice";
-import { ACCOUNT, BASE, CONTACTS, LOGIN, MENU, REGISTRATION } from "../../constants/routeConstants";
+import { ACCOUNT, BASE, LOGIN, MENU, REGISTRATION } from "../../constants/routeConstants";
 import { CART } from "../../constants/urlConstants";
 import "./NavBar.scss";
 import logo2 from "../../img/perfumelogo.png"

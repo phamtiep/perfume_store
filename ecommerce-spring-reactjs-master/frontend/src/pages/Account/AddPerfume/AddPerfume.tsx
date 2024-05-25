@@ -58,8 +58,10 @@ const AddPerfume: FC = (): ReactElement => {
     }, [isPerfumeAdded]);
 
     const onFormSubmit = (data: AddPerfumeData): void => {
+        
         const bodyFormData: FormData = new FormData();
         // @ts-ignore
+
         bodyFormData.append("file", { file });
         bodyFormData.append(
             "perfume",
@@ -93,21 +95,21 @@ const AddPerfume: FC = (): ReactElement => {
                             placeholder={"Enter the release year"}
                             disabled={ispPerfumeLoading}
                         />
-                        <AddFormSelect
+                        <AddFormInput
                             title={"Perfume type"}
                             name={"type"}
                             error={perfumeErrors.typeError}
-                            placeholder={"Eau de Parfum"}
+                            placeholder={"Type"}
                             disabled={ispPerfumeLoading}
-                            values={["Eau de Parfum", "Eau de Toilette"]}
+
                         />
-                        <AddFormSelect
+                        <AddFormInput
                             title={"Gender"}
                             name={"perfumeGender"}
                             error={perfumeErrors.perfumeGenderError}
                             placeholder={"male"}
                             disabled={ispPerfumeLoading}
-                            values={["male", "female"]}
+
                         />
                         <AddFormInput
                             title={"Heart notes"}
