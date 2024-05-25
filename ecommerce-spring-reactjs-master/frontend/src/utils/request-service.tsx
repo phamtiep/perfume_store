@@ -19,6 +19,10 @@ class RequestService {
     delete = (url: string, isAuthRequired: boolean = false, contentType: string = "application/json") => {
         return createRequest("DELETE", url, null, isAuthRequired, contentType);
     };
+
+    get1 = (url: string, isAuthRequired: boolean = false, contentType: string = "application/json") => {
+    return createRequest1("GET", url, null, isAuthRequired, contentType);
+};
 }
 
 const createRequest = (method: Method, url: string, body: any, isAuthRequired: boolean, contentType: string) => {
@@ -29,6 +33,15 @@ const createRequest = (method: Method, url: string, body: any, isAuthRequired: b
         headers: setHeader(isAuthRequired, contentType)
     });
 };
+const createRequest1 = (method: Method, url: string, body: any, isAuthRequired: boolean, contentType: string) => {
+    return axios({
+        method: method,
+        url:  url,
+        data: body,
+        headers: setHeader(isAuthRequired, contentType)
+    });
+};
+
 
 const setHeader = (isAuthRequired: boolean, contentType: string) => {
     if (isAuthRequired) {
