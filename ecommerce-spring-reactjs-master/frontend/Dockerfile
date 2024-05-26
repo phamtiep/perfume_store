@@ -1,9 +1,10 @@
-FROM  node:17.5.0-alpine3.15
+FROM  node:17-alpine3.15
 
-COPY package.json package-locj.json
+COPY package.json package-lock.json
 
 RUN npm install
 
 COPY . .
 
-RUN npm build
+RUN npm run build
+
